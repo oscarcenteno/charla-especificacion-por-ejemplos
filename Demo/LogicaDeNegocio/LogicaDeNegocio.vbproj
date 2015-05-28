@@ -67,6 +67,9 @@
     <Compile Include="Entregas gratuitas\Enumerados.vb" />
     <Compile Include="Entregas gratuitas\MontoEnDolares.vb" />
     <Compile Include="Garantías\Formulas financieras\FormulasDeValoracion.vb" />
+    <Compile Include="Garantías\MontoEnteroExcel.vb" />
+    <Compile Include="Garantías\MontoRealExcel.vb" />
+    <Compile Include="Garantías\Porcentaje.vb" />
     <Compile Include="Garantías\Valoraciones\Valorador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -104,12 +107,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\TiposDeDatos\TiposDeDatos.vbproj">
-      <Project>{3be4ef19-d6e7-4ac1-a22f-c044e432d349}</Project>
-      <Name>TiposDeDatos</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

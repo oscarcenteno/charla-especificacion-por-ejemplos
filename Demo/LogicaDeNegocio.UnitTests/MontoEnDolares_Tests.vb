@@ -1,7 +1,7 @@
 ﻿Imports System.Text
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
-<TestClass()> Public Class MontoEnDolaresTests
+<TestClass()> Public Class MontoEnDolares_Tests
 
     <TestMethod()> Public Sub Constructor_Basico()
         Dim valorEsperado As Double = 25

@@ -17,10 +17,16 @@ Public Class Porcentaje
         elPorcentaje = elPorcentaje.Trim
         Dim montoSinSimboloDePorcentaje As String = elPorcentaje.Replace("%", String.Empty)
         Dim porcentajeNumerico As Double = 0
+
+        Dim resultado As Porcentaje = Nothing
+
         If elPorcentaje.EndsWith("%") And Double.TryParse(montoSinSimboloDePorcentaje, porcentajeNumerico) Then
-            Return New Porcentaje(porcentajeNumerico / 100)
+            resultado = New Porcentaje(porcentajeNumerico / 100)
         Else
             Throw New ArgumentException(String.Format("'{0}' no es un porcentaje", elPorcentaje))
         End If
+
+        Return resultado
+
     End Function
 End Class

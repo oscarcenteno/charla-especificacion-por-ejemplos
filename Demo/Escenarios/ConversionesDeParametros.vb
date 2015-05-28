@@ -1,6 +1,5 @@
 ﻿Imports TechTalk.SpecFlow
 Imports TechTalk.SpecFlow.Assist
-Imports TiposDeDatos
 Imports LogicaDeNegocio
 
 <Binding()> _

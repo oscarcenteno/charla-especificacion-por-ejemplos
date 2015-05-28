@@ -187,10 +187,6 @@
       <Project>{a2cd362d-57f9-424b-8ca5-d36488ff336f}</Project>
       <Name>LogicaDeNegocio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TiposDeDatos\TiposDeDatos.vbproj">
-      <Project>{3be4ef19-d6e7-4ac1-a22f-c044e432d349}</Project>
-      <Name>TiposDeDatos</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Choose>

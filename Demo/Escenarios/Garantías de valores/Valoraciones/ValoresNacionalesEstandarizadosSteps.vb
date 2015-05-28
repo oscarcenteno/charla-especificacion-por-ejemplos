@@ -1,7 +1,6 @@
 ﻿Imports System
 Imports TechTalk.SpecFlow
 Imports LogicaDeNegocio
-Imports TiposDeDatos
 
 Namespace Escenarios
 

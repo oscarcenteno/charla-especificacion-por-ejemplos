@@ -2,10 +2,6 @@
 
     Private _saldo As Integer
 
-    Public Sub New()
-        _saldo = 0
-    End Sub
-
     Sub New(saldoInicial As Integer)
         _saldo = saldoInicial
     End Sub

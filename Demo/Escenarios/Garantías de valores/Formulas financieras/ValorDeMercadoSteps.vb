@@ -3,7 +3,6 @@ Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
 Imports TechTalk.SpecFlow
-Imports TiposDeDatos
 Imports LogicaDeNegocio
 
 Namespace Escenarios

@@ -80,7 +80,7 @@
     <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MontoEnDolaresTests.vb" />
+    <Compile Include="MontoEnDolares_Tests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -96,6 +96,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Porcentaje_Tests.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -120,10 +121,6 @@
     <ProjectReference Include="..\LogicaDeNegocio\LogicaDeNegocio.vbproj">
       <Project>{a2cd362d-57f9-424b-8ca5-d36488ff336f}</Project>
       <Name>LogicaDeNegocio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TiposDeDatos\TiposDeDatos.vbproj">
-      <Project>{3be4ef19-d6e7-4ac1-a22f-c044e432d349}</Project>
-      <Name>TiposDeDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
