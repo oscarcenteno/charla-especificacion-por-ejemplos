@@ -28,7 +28,7 @@ Namespace Escenarios.CuentasBancarias
         <Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()>  _
         Public Shared Sub FeatureSetup(ByVal testContext As Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner
-            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Depositar en cuenta", "Como Paulo, el cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero depositar en mi cuenta "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de ahorrar.", ProgrammingLanguage.VB, CType(Nothing,String()))
+            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Depositar en cuenta", "Como Paulo, el cliente"&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero depositar en mi cuenta "&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de ahorrar.", ProgrammingLanguage.VB, CType(Nothing,String()))
             testRunner.OnFeatureStart(featureInfo)
         End Sub
         

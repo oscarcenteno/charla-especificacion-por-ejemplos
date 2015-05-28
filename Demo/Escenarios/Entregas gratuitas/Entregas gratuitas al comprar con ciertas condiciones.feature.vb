@@ -28,8 +28,8 @@ Namespace Escenarios.EntregasGratuitas
         <Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()>  _
         Public Shared Sub FeatureSetup(ByVal testContext As Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner
-            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Entregas gratuitas al comprar con ciertas condiciones", "Como un cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero tener una entrega gratuita cuando compro ciertos producto"& _ 
-                    "s"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de abaratar mis costos.", ProgrammingLanguage.VB, CType(Nothing,String()))
+            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Entregas gratuitas al comprar con ciertas condiciones", "Como un cliente"&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero tener una entrega gratuita cuando compro ciertos productos"& _ 
+                    ""&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de abaratar mis costos.", ProgrammingLanguage.VB, CType(Nothing,String()))
             testRunner.OnFeatureStart(featureInfo)
         End Sub
         
@@ -100,30 +100,15 @@ testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(N
          Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "clientes premium tienen minimo"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "clientes premium tienen minimo"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:cantidad", "5"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:productos", "libros"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio base", "$25"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:podria tener una entrega gratuita", "Sí")>  _
-        Public Overridable Sub EntregasGratuitas_ClientesPremiumTienenMinimo()
-            Me.EntregasGratuitas("clientes premium tienen minimo", "premium", "5", "libros", "$25", "Sí", CType(Nothing,String()))
-        End Sub
-        
-        <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "clientes premium pueden comprar todos los que deseen"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "clientes premium pueden comprar todos los que deseen"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "clientes premium tienen promocion de envío en libros"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "clientes premium tienen promocion de envío en libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:cantidad", "5"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:productos", "libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio base", "$50"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:podria tener una entrega gratuita", "Sí")>  _
-        Public Overridable Sub EntregasGratuitas_ClientesPremiumPuedenComprarTodosLosQueDeseen()
-            Me.EntregasGratuitas("clientes premium pueden comprar todos los que deseen", "premium", "5", "libros", "$50", "Sí", CType(Nothing,String()))
+        Public Overridable Sub EntregasGratuitas_ClientesPremiumTienenPromocionDeEnvioEnLibros()
+            Me.EntregasGratuitas("clientes premium tienen promocion de envío en libros", "premium", "5", "libros", "$50", "Sí", CType(Nothing,String()))
         End Sub
         
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
