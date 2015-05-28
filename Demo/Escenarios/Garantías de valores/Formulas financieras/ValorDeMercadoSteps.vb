@@ -24,8 +24,7 @@ Namespace Escenarios
 
         <TechTalk.SpecFlow.When("se valora con el ""(.*)"" reportado en el vector de precios para la emisión")> _
         Public Sub CuandoSeValoraConElReportadoEnElVectorDePreciosParaLaEmision(ByVal precioDeMercado As MontoRealExcel)
-            Dim elValorador As New Valorador
-            _valorDeMercadoObtenido = elValorador.CalcularValorDeMercado(_montoNominal.Valor, precioDeMercado.Valor)
+            _valorDeMercadoObtenido = LogicaDeNegocio.FormulasDeValoracion.CalcularValorDeMercado(_montoNominal.Valor, precioDeMercado.Valor)
         End Sub
 
         <TechTalk.SpecFlow.Then("se obtiene el ""(.*)"" de la emisión")> _

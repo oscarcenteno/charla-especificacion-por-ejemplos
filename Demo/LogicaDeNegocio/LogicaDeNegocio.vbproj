@@ -66,6 +66,7 @@
     <Compile Include="Entregas gratuitas\EntregaGratuita.vb" />
     <Compile Include="Entregas gratuitas\Enumerados.vb" />
     <Compile Include="Entregas gratuitas\MontoEnDolares.vb" />
+    <Compile Include="Garantías\Formulas financieras\FormulasDeValoracion.vb" />
     <Compile Include="Garantías\Valoraciones\Valorador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

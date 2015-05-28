@@ -29,8 +29,7 @@ Namespace Escenarios
 
         <TechTalk.SpecFlow.Then("se obtiene los ""(.*)""")> _
         Public Sub EntoncesSeObtieneLos(ByVal díasAlVencimientoEsperados As MontoEnteroExcel)
-            Dim elValorador As New Valorador
-            Dim diasAlVencimientoObtenidos As Integer = elValorador.CalcularDiasAlVencimiento(_fecha, _fechaDeVencimiento)
+            Dim diasAlVencimientoObtenidos As Integer = LogicaDeNegocio.FormulasDeValoracion.CalcularDiasAlVencimiento(_fecha, _fechaDeVencimiento)
             Assert.AreEqual(díasAlVencimientoEsperados.Valor, diasAlVencimientoObtenidos)
         End Sub
 

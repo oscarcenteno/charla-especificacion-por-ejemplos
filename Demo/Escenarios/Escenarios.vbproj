@@ -115,12 +115,12 @@
       <DependentUpon>Valor de mercado.feature</DependentUpon>
     </Compile>
     <Compile Include="Garantías de valores\Formulas financieras\ValorDeMercadoSteps.vb" />
-    <Compile Include="Garantías de valores\Valorar garantías\Valores nacionales estandarizados.feature.vb">
+    <Compile Include="Garantías de valores\Valoraciones\Valores nacionales estandarizados.feature.vb">
       <DependentUpon>Valores nacionales estandarizados.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Garantías de valores\Valorar garantías\ValoresNacionalesEstandarizadosSteps.vb" />
+    <Compile Include="Garantías de valores\Valoraciones\ValoresNacionalesEstandarizadosSteps.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -167,7 +167,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Valor de mercado.feature.vb</LastGenOutput>
     </None>
-    <None Include="Garantías de valores\Valorar garantías\Valores nacionales estandarizados.feature">
+    <None Include="Garantías de valores\Valoraciones\Valores nacionales estandarizados.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Valores nacionales estandarizados.feature.vb</LastGenOutput>
     </None>
