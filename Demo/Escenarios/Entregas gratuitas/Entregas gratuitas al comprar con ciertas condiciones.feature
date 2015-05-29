@@ -3,7 +3,6 @@
 	Quiero tener una entrega gratuita cuando compro ciertos productos
 	Con el fin de abaratar mis costos.
 
-@entregas
 Esquema del escenario: Entregas gratuitas
 
 Dado un cliente de cierta "<categoria>"

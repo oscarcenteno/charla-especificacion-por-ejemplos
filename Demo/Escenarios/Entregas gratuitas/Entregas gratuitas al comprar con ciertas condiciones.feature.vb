@@ -28,8 +28,8 @@ Namespace Escenarios.EntregasGratuitas
         <Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()>  _
         Public Shared Sub FeatureSetup(ByVal testContext As Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner
-            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Entregas gratuitas al comprar con ciertas condiciones", "Como un cliente"&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero tener una entrega gratuita cuando compro ciertos productos"& _ 
-                    ""&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de abaratar mis costos.", ProgrammingLanguage.VB, CType(Nothing,String()))
+            Dim featureInfo As TechTalk.SpecFlow.FeatureInfo = New TechTalk.SpecFlow.FeatureInfo(New System.Globalization.CultureInfo("es-ES"), "Entregas gratuitas al comprar con ciertas condiciones", "Como un cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Quiero tener una entrega gratuita cuando compro ciertos producto"& _ 
+                    "s"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Con el fin de abaratar mis costos.", ProgrammingLanguage.VB, CType(Nothing,String()))
             testRunner.OnFeatureStart(featureInfo)
         End Sub
         
@@ -61,21 +61,17 @@ Namespace Escenarios.EntregasGratuitas
         End Sub
         
         Public Overridable Sub EntregasGratuitas(ByVal intencionDelEjemplo As String, ByVal categoria As String, ByVal cantidad As String, ByVal productos As String, ByVal precioBase As String, ByVal podriaTenerUnaEntregaGratuita As String, ByVal exampleTags() As String)
-            Dim __tags() As String = New String() {"entregas"}
-            If (Not (exampleTags) Is Nothing) Then
-                __tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(__tags, exampleTags))
-            End If
-            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Entregas gratuitas", __tags)
-#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",7)
+            Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Entregas gratuitas", exampleTags)
+#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",6)
 Me.ScenarioSetup(scenarioInfo)
 #End ExternalSource
-#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",9)
+#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",8)
 testRunner.Given(String.Format("un cliente de cierta ""{0}""", categoria), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Dado ")
 #End ExternalSource
-#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",10)
+#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",9)
 testRunner.When(String.Format("la orden contiene una ""{0}"" de ""{1}"" con un precio mayor a un ""{2}""", cantidad, productos, precioBase), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Cuando ")
 #End ExternalSource
-#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",11)
+#ExternalSource("Entregas gratuitas al comprar con ciertas condiciones.feature",10)
 testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Entonces ")
 #End ExternalSource
             Me.ScenarioCleanup
@@ -84,7 +80,6 @@ testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(N
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "clientes normales nunca aplican"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "clientes normales nunca aplican"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "normal"),  _
@@ -99,7 +94,6 @@ testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(N
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "clientes premium tienen promocion de envío en libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "clientes premium tienen promocion de envío en libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
@@ -114,7 +108,6 @@ testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(N
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "las lavadoras no se entregan gratis"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "las lavadoras no se entregan gratis"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
@@ -129,7 +122,6 @@ testRunner.Then(String.Format("""{0}""", podriaTenerUnaEntregaGratuita), CType(N
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Entregas gratuitas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Entregas gratuitas al comprar con ciertas condiciones"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("entregas"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "bienes digitales no aplican"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "bienes digitales no aplican"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
