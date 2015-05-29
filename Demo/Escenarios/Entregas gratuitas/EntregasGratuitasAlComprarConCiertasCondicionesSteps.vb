@@ -15,10 +15,11 @@ Namespace Escenarios
             categoriaDeCliente = categoria
         End Sub
 
-        <TechTalk.SpecFlow.When("la orden contiene una ""(.*)"" de ""(.*)"" con un precio mayor a un ""(.*)""")> _
-        Public Sub CuandoLaOrdenContieneUnaDeConUnPrecioMayorAUn(ByVal cantidad As Integer, ByVal productos As TipoDeProducto, ByVal precioBase As MontoEnDolares)
+        <TechTalk.SpecFlow.When("la orden contiene una ""(.*)"" de ""(.*)"" con un ""(.*)""")> _
+        Public Sub CuandoLaOrdenContieneUnaDeConUn(ByVal cantidad As Int32, ByVal productos As TipoDeProducto, ByVal precioBase As MontoEnDolares)
             respuestaObtenida = EntregaGratuita.CumpleLasCondiciones(categoriaDeCliente, cantidad, productos, precioBase)
         End Sub
+
 
         <TechTalk.SpecFlow.Then("""(.*)""")> _
         Public Sub Entonces(ByVal respuestaEsperada As Respuesta)
