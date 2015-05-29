@@ -1,6 +1,7 @@
 ﻿Imports TechTalk.SpecFlow
 Imports TechTalk.SpecFlow.Assist
-Imports LogicaDeNegocio
+Imports LogicaDeNegocio.EntregasGratuitas
+Imports LogicaDeNegocio.Garantias
 
 <Binding()> _
 Public Class ConversionesDeParametros

@@ -4,6 +4,7 @@ Imports System.Linq
 Imports System.Text
 Imports TechTalk.SpecFlow
 Imports LogicaDeNegocio
+Imports LogicaDeNegocio.Garantias
 
 Namespace Escenarios
 
@@ -23,7 +24,7 @@ Namespace Escenarios
 
         <TechTalk.SpecFlow.When("se valora con el ""(.*)"" reportado en el vector de precios para la emisión")> _
         Public Sub CuandoSeValoraConElReportadoEnElVectorDePreciosParaLaEmision(ByVal precioDeMercado As MontoRealExcel)
-            _valorDeMercadoObtenido = LogicaDeNegocio.FormulasDeValoracion.CalcularValorDeMercado(_montoNominal.Valor, precioDeMercado.Valor)
+            _valorDeMercadoObtenido = FormulasDeValoracion.CalcularValorDeMercado(_montoNominal.Valor, precioDeMercado.Valor)
         End Sub
 
         <TechTalk.SpecFlow.Then("se obtiene el ""(.*)"" de la emisión")> _

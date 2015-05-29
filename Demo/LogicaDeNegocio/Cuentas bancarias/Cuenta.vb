@@ -1,4 +1,6 @@
-﻿Public Class Cuenta
+﻿Namespace CuentasBancarias
+
+Public Class Cuenta
 
     Private _saldo As Integer
 
@@ -23,4 +25,6 @@
         Return _saldo
     End Function
 
-End Class
+    End Class
+
+End Namespace

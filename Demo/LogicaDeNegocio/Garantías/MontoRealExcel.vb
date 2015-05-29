@@ -1,25 +1,29 @@
 ﻿Imports System.Globalization
 
-' Separado por comas: 3,333,122.1551
-Public Class MontoRealExcel
+Namespace Garantias
 
-    Private _montoNumerico As Decimal
+    ' Separado por comas: 3,333,122.1551
+    Public Class MontoRealExcel
 
-    Sub New(montoNumerico As Decimal)
-        _montoNumerico = montoNumerico
-    End Sub
+        Private _montoNumerico As Decimal
 
-    Public ReadOnly Property Valor As Decimal
-        Get
-            Return _montoNumerico
-        End Get
-    End Property
+        Sub New(montoNumerico As Decimal)
+            _montoNumerico = montoNumerico
+        End Sub
 
-    Shared Function Parse(elMonto As String) As MontoRealExcel
+        Public ReadOnly Property Valor As Decimal
+            Get
+                Return _montoNumerico
+            End Get
+        End Property
 
-        Dim culture As CultureInfo
-        culture = New CultureInfo("en-US")
-        Dim montoNumerico As Decimal = Decimal.Parse(elMonto, Globalization.NumberStyles.Any, culture)
-        Return New MontoRealExcel(montoNumerico)
-    End Function
-End Class
+        Shared Function Parse(elMonto As String) As MontoRealExcel
+
+            Dim culture As CultureInfo
+            culture = New CultureInfo("en-US")
+            Dim montoNumerico As Decimal = Decimal.Parse(elMonto, Globalization.NumberStyles.Any, culture)
+            Return New MontoRealExcel(montoNumerico)
+        End Function
+    End Class
+
+End Namespace

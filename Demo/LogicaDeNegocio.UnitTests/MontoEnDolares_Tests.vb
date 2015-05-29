@@ -1,11 +1,12 @@
 ﻿Imports System.Text
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
+Imports LogicaDeNegocio.EntregasGratuitas
 
 <TestClass()> Public Class MontoEnDolares_Tests
 
     <TestMethod()> Public Sub Constructor_Basico()
         Dim valorEsperado As Double = 25
-        Dim sut As New LogicaDeNegocio.MontoEnDolares(valorEsperado)
+        Dim sut As New MontoEnDolares(valorEsperado)
         Dim valorObtenido As Double = sut.Valor
         Assert.AreEqual(Of Double)(valorEsperado, valorObtenido)
 
@@ -14,13 +15,13 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     <TestMethod()> _
     Public Sub Parse_Exitoso()
         Dim esperado = New MontoEnDolares(25)
-        Dim obtenido = LogicaDeNegocio.MontoEnDolares.Parse("$25")
+        Dim obtenido = MontoEnDolares.Parse("$25")
         Assert.AreEqual(esperado, obtenido)
     End Sub
 
     <TestMethod(), ExpectedException(GetType(ArgumentException))> _
     Public Sub Parse_Fallido()
-        Dim valorObtenido = LogicaDeNegocio.MontoEnDolares.Parse("NA25")
+        Dim valorObtenido = MontoEnDolares.Parse("NA25")
     End Sub
 
     <TestMethod()> _

@@ -1,19 +1,23 @@
-﻿Public Class Valorador
+﻿Namespace Garantias
 
-    Public Function CalcularAporteDeGarantias(diasAlVencimientoMinimos As Integer, diasAlVencimiento As Integer, valorDeMercado As Decimal, porcentajeDeCobertura As Decimal) As Decimal
+    Public Class Valorador
 
-        Dim aporteDeGarantia As Decimal = 0
+        Public Function CalcularAporteDeGarantias(diasAlVencimientoMinimos As Integer, diasAlVencimiento As Integer, valorDeMercado As Decimal, porcentajeDeCobertura As Decimal) As Decimal
 
-        If CumpleDiasMinimos(diasAlVencimientoMinimos, diasAlVencimiento) Then
-            aporteDeGarantia = valorDeMercado * porcentajeDeCobertura
-        End If
+            Dim aporteDeGarantia As Decimal = 0
 
-        Return aporteDeGarantia
+            If CumpleDiasMinimos(diasAlVencimientoMinimos, diasAlVencimiento) Then
+                aporteDeGarantia = valorDeMercado * porcentajeDeCobertura
+            End If
 
-    End Function
+            Return aporteDeGarantia
 
-    Private Function CumpleDiasMinimos(diasAlVencimientoMinimos As Integer, diasAlVencimento As Integer) As Boolean
-        Return diasAlVencimento > diasAlVencimientoMinimos
-    End Function
+        End Function
 
-End Class
+        Private Function CumpleDiasMinimos(diasAlVencimientoMinimos As Integer, diasAlVencimento As Integer) As Boolean
+            Return diasAlVencimento > diasAlVencimientoMinimos
+        End Function
+
+    End Class
+
+End Namespace

@@ -1,66 +1,70 @@
-﻿Public Class MontoEnDolares
-    Implements System.IEquatable(Of MontoEnDolares)
+﻿Namespace EntregasGratuitas
 
-    Private _monto As Double
+    Public Class MontoEnDolares
+        Implements System.IEquatable(Of MontoEnDolares)
 
-    Public Sub New(nuevoMonto As Double)
-        _monto = nuevoMonto
-    End Sub
+        Private _monto As Double
 
-    Public ReadOnly Property Valor As Double
-        Get
-            Return _monto
-        End Get
-    End Property
+        Public Sub New(nuevoMonto As Double)
+            _monto = nuevoMonto
+        End Sub
 
-    ' $25
-    Public Shared Function Parse(monto As String) As MontoEnDolares
-        monto = monto.Trim
-        Dim montoSinCurrency As String = monto.Replace("$", String.Empty)
-        Dim montoNumerico As Double = 0
-        Dim resultado As MontoEnDolares = Nothing
+        Public ReadOnly Property Valor As Double
+            Get
+                Return _monto
+            End Get
+        End Property
 
-        If monto.StartsWith("$") And Double.TryParse(montoSinCurrency, montoNumerico) Then
-            resultado = New MontoEnDolares(montoNumerico)
-        Else
-            Throw New ArgumentException(String.Format("'{0}' no es un monto en dólares", monto))
-        End If
+        ' $25
+        Public Shared Function Parse(monto As String) As MontoEnDolares
+            monto = monto.Trim
+            Dim montoSinCurrency As String = monto.Replace("$", String.Empty)
+            Dim montoNumerico As Double = 0
+            Dim resultado As MontoEnDolares = Nothing
 
-        Return resultado
+            If monto.StartsWith("$") And Double.TryParse(montoSinCurrency, montoNumerico) Then
+                resultado = New MontoEnDolares(montoNumerico)
+            Else
+                Throw New ArgumentException(String.Format("'{0}' no es un monto en dólares", monto))
+            End If
 
-    End Function
+            Return resultado
 
-    ' $25
-    Public Overrides Function ToString() As String
-        Return String.Format("${0}", _monto)
-    End Function
+        End Function
 
-    Public Overloads Function Equals(ByVal other As MontoEnDolares) As Boolean Implements System.IEquatable(Of MontoEnDolares).Equals
-        Dim result As Boolean = False
+        ' $25
+        Public Overrides Function ToString() As String
+            Return String.Format("${0}", _monto)
+        End Function
 
-        If other Is Nothing Then
-            result = False
-        ElseIf other Is Me Then
-            result = True
-        Else
-            result = Me._monto.Equals(other.Valor)
-        End If
+        Public Overloads Function Equals(ByVal other As MontoEnDolares) As Boolean Implements System.IEquatable(Of MontoEnDolares).Equals
+            Dim result As Boolean = False
 
-        Return result
-    End Function
+            If other Is Nothing Then
+                result = False
+            ElseIf other Is Me Then
+                result = True
+            Else
+                result = Me._monto.Equals(other.Valor)
+            End If
 
-    Public Overrides Function Equals(other As Object) As Boolean
+            Return result
+        End Function
 
-        Dim temp = TryCast(other, MontoEnDolares)
-        Dim result As Boolean = False
+        Public Overrides Function Equals(other As Object) As Boolean
 
-        If temp IsNot Nothing Then
-            result = Me.Equals(temp)
-        Else
-            result = False
-        End If
+            Dim temp = TryCast(other, MontoEnDolares)
+            Dim result As Boolean = False
 
-        Return result
+            If temp IsNot Nothing Then
+                result = Me.Equals(temp)
+            Else
+                result = False
+            End If
 
-    End Function
-End Class
+            Return result
+
+        End Function
+    End Class
+
+End Namespace

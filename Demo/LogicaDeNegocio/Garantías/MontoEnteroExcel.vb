@@ -1,24 +1,28 @@
 ﻿Imports System.Globalization
 
-' Separado por comas: 3,333,122.1551
-Public Class MontoEnteroExcel
+Namespace Garantias
 
-    Private _montoNumerico As Integer
+    ' Separado por comas: 3,333,122.1551
+    Public Class MontoEnteroExcel
 
-    Sub New(montoNumerico As Integer)
-        _montoNumerico = montoNumerico
-    End Sub
+        Private _montoNumerico As Integer
 
-    Public ReadOnly Property Valor As Integer
-        Get
-            Return _montoNumerico
-        End Get
-    End Property
+        Sub New(montoNumerico As Integer)
+            _montoNumerico = montoNumerico
+        End Sub
 
-    Shared Function Parse(elMonto As String) As MontoEnteroExcel
-        Dim culture As CultureInfo
-        culture = New CultureInfo("en-US")
-        Dim montoNumerico As Integer = Integer.Parse(elMonto, Globalization.NumberStyles.Any, culture)
-        Return New MontoEnteroExcel(montoNumerico)
-    End Function
-End Class
+        Public ReadOnly Property Valor As Integer
+            Get
+                Return _montoNumerico
+            End Get
+        End Property
+
+        Shared Function Parse(elMonto As String) As MontoEnteroExcel
+            Dim culture As CultureInfo
+            culture = New CultureInfo("en-US")
+            Dim montoNumerico As Integer = Integer.Parse(elMonto, Globalization.NumberStyles.Any, culture)
+            Return New MontoEnteroExcel(montoNumerico)
+        End Function
+    End Class
+
+End Namespace

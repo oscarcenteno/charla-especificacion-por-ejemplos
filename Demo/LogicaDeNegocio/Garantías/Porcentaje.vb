@@ -1,32 +1,35 @@
-﻿
-Public Class Porcentaje
+﻿Namespace Garantias
 
-    Private _porcentajeNumerico As Double
+    Public Class Porcentaje
 
-    Sub New(porcentajeNumerico As Double)
-        _porcentajeNumerico = porcentajeNumerico
-    End Sub
+        Private _porcentajeNumerico As Double
 
-    Public ReadOnly Property Valor As Double
-        Get
-            Return _porcentajeNumerico
-        End Get
-    End Property
+        Sub New(porcentajeNumerico As Double)
+            _porcentajeNumerico = porcentajeNumerico
+        End Sub
 
-    Shared Function Parse(elPorcentaje As String) As Porcentaje
-        elPorcentaje = elPorcentaje.Trim
-        Dim montoSinSimboloDePorcentaje As String = elPorcentaje.Replace("%", String.Empty)
-        Dim porcentajeNumerico As Double = 0
+        Public ReadOnly Property Valor As Double
+            Get
+                Return _porcentajeNumerico
+            End Get
+        End Property
 
-        Dim resultado As Porcentaje = Nothing
+        Shared Function Parse(elPorcentaje As String) As Porcentaje
+            elPorcentaje = elPorcentaje.Trim
+            Dim montoSinSimboloDePorcentaje As String = elPorcentaje.Replace("%", String.Empty)
+            Dim porcentajeNumerico As Double = 0
 
-        If elPorcentaje.EndsWith("%") And Double.TryParse(montoSinSimboloDePorcentaje, porcentajeNumerico) Then
-            resultado = New Porcentaje(porcentajeNumerico / 100)
-        Else
-            Throw New ArgumentException(String.Format("'{0}' no es un porcentaje", elPorcentaje))
-        End If
+            Dim resultado As Porcentaje = Nothing
 
-        Return resultado
+            If elPorcentaje.EndsWith("%") And Double.TryParse(montoSinSimboloDePorcentaje, porcentajeNumerico) Then
+                resultado = New Porcentaje(porcentajeNumerico / 100)
+            Else
+                Throw New ArgumentException(String.Format("'{0}' no es un porcentaje", elPorcentaje))
+            End If
 
-    End Function
-End Class
+            Return resultado
+
+        End Function
+    End Class
+
+End Namespace

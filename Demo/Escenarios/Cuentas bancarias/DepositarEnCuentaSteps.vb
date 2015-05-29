@@ -1,6 +1,6 @@
 ﻿Imports System
 Imports TechTalk.SpecFlow
-Imports LogicaDeNegocio
+Imports LogicaDeNegocio.CuentasBancarias
 
 Namespace Escenarios
 
