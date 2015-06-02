@@ -21,7 +21,7 @@
 
   <Target Name="specs">
 
-    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\mstest.exe" /testcontainer:"Escenarios\bin\Debug\Escenarios.dll" /resultsfile:"TestResults\escenarios-results.trx"'
+    <Exec Command='"C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\mstest.exe" /testcontainer:"especificaciones\bin\Debug\especificaciones.dll" /resultsfile:"TestResults\especificaciones-results.trx"'
           ContinueOnError='true'/>
 
   </Target>
@@ -33,10 +33,10 @@
     
     <Pickles
       Language="es"
-      FeatureDirectory="Escenarios"
-      OutputDirectory="Documentacion"
+      FeatureDirectory="especificaciones"
+      OutputDirectory="documentacion"
       ResultsFormat="mstest"
-      ResultsFile="TestResults\escenarios-results.trx"
+      ResultsFile="TestResults\especificaciones-results.trx"
       SystemUnderTestName="Demo"
       SystemUnderTestVersion="1.0.0.0"
       DocumentationFormat="dhtml" />
