@@ -1,10 +1,10 @@
-﻿version: 1.0.0
+version: 1.0.0
 
 install:
 - nuget restore
 
 build:
-project: demo\demo.sln
+project: demo.sln
 verbosity: detailed
 
 environment:
