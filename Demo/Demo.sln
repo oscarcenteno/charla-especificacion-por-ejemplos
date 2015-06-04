@@ -20,6 +20,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Especificaciones", "Especif
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ppt", "Ppt", "{C817E574-08E1-4DCA-BA69-E3574D926056}"
 	ProjectSection(SolutionItems) = preProject
+		..\Ejemplo de Entregas Gratuitas.xlsx = ..\Ejemplo de Entregas Gratuitas.xlsx
 		..\Especificacion por Ejemplos.pptx = ..\Especificacion por Ejemplos.pptx
 	EndProjectSection
 EndProject
