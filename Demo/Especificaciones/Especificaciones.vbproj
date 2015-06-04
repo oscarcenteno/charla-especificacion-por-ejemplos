@@ -103,6 +103,12 @@
       <DependentUpon>Entregas gratuitas al comprar con ciertas condiciones.feature</DependentUpon>
     </Compile>
     <Compile Include="Entregas gratuitas\EntregasGratuitasAlComprarConCiertasCondicionesSteps.vb" />
+    <Compile Include="Entregas gratuitas\Entregas gratuitas con multiples productos.feature.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entregas gratuitas con multiples productos.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Entregas gratuitas\EntregasGratuitasConMultiplesProductosSteps.vb" />
     <Compile Include="Garantías de valores\Formulas financieras\DiasAlVencimientoSteps.vb" />
     <Compile Include="Garantías de valores\Formulas financieras\Días al vencimiento.feature.vb">
       <AutoGen>True</AutoGen>
@@ -158,6 +164,10 @@
     <None Include="Entregas gratuitas\Entregas gratuitas al comprar con ciertas condiciones.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Entregas gratuitas al comprar con ciertas condiciones.feature.vb</LastGenOutput>
+    </None>
+    <None Include="Entregas gratuitas\Entregas gratuitas con multiples productos.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Entregas gratuitas con multiples productos.feature.vb</LastGenOutput>
     </None>
     <None Include="Garantías de valores\Formulas financieras\Días al vencimiento.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

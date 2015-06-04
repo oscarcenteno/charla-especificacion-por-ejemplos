@@ -26,5 +26,11 @@ Public Class ConversionesDeParametros
         Return MontoEnDolares.Parse(monto)
     End Function
 
+    <StepArgumentTransformation()>
+    Public Function TransformeAListaDeTiposDeProducto(tiposSeparadosPorComa As String) As IEnumerable(Of TipoDeProducto)
+        Dim arregloDeTipos = tiposSeparadosPorComa.Split(",")
+        Return arregloDeTipos.Select(Function(c) CType([Enum].Parse(GetType(TipoDeProducto), System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(c.Trim)), TipoDeProducto)).ToList()
+    End Function
+
 End Class
 

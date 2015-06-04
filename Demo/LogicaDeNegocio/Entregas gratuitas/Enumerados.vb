@@ -14,7 +14,7 @@
     Public Enum TipoDeProducto
         Libros
         Lavadoras
-        Digital
+        Digitales
     End Enum
 
 End Namespace
