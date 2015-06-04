@@ -22,8 +22,8 @@ Namespace Especificaciones
             minimo = elMinimo
         End Sub
 
-        <TechTalk.SpecFlow.When("se procesa una orden con ""(.*)"" con un ""(.*)""")> _
-        Public Sub CuandoSeProcesaUnaOrdenConYTieneConUn(ByVal tipos As IEnumerable(Of TipoDeProducto), ByVal precioTotal As MontoEnDolares)
+        <TechTalk.SpecFlow.When("se procesa una orden con ""(.*)"" y un ""(.*)""")> _
+        Public Sub CuandoSeProcesaUnaOrdenConYTieneYUn(ByVal tipos As IEnumerable(Of TipoDeProducto), ByVal precioTotal As MontoEnDolares)
             Dim validadorDeEntregas = New EntregaGratuita(minimo)
             respuestaObtenida = validadorDeEntregas.CumpleLasCondiciones(categoriaDeCliente, tipos, precioTotal)
         End Sub

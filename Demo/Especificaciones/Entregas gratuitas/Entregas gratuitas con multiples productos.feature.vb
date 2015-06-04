@@ -62,7 +62,7 @@ Namespace Especificaciones.EntregasGratuitas
             testRunner.CollectScenarioErrors
         End Sub
         
-        Public Overridable Sub Reglas(ByVal intencionDelEjemplo As String, ByVal categoria As String, ByVal tiposDeProducto As String, ByVal precioTotal As String, ByVal calificaParaUnaEntregaGratuita As String, ByVal exampleTags() As String)
+        Public Overridable Sub Reglas(ByVal intencionDelEjemplo As String, ByVal categoria As String, ByVal tiposDeProducto As String, ByVal precioTotal As String, ByVal calificaraParaUnaEntregaGratuita As String, ByVal exampleTags() As String)
             Dim scenarioInfo As TechTalk.SpecFlow.ScenarioInfo = New TechTalk.SpecFlow.ScenarioInfo("Reglas", exampleTags)
 #ExternalSource("Entregas gratuitas con multiples productos.feature",7)
 Me.ScenarioSetup(scenarioInfo)
@@ -74,10 +74,10 @@ testRunner.Given(String.Format("un cliente que tenia cierta ""{0}""", categoria)
 testRunner.And("que el mínimo para optar por una entrega gratuita era de ""$25""", CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Y ")
 #End ExternalSource
 #ExternalSource("Entregas gratuitas con multiples productos.feature",11)
-testRunner.When(String.Format("se procesa una orden con ""{0}"" con un ""{1}""", tiposDeProducto, precioTotal), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Cuando ")
+testRunner.When(String.Format("se procesa una orden con ""{0}"" y un ""{1}""", tiposDeProducto, precioTotal), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Cuando ")
 #End ExternalSource
 #ExternalSource("Entregas gratuitas con multiples productos.feature",12)
-testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Entonces ")
+testRunner.Then(String.Format("la orden ""{0}""", calificaraParaUnaEntregaGratuita), CType(Nothing,String), CType(Nothing,TechTalk.SpecFlow.Table), "Entonces ")
 #End ExternalSource
             Me.ScenarioCleanup
         End Sub
@@ -90,7 +90,7 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "normal"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$25"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "No")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "No")>  _
         Public Overridable Sub Reglas_LosClientesNormalesNuncaCalifican()
             Me.Reglas("los clientes normales nunca califican", "normal", "libros", "$25", "No", CType(Nothing,String()))
         End Sub
@@ -103,7 +103,7 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$25"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "Sí")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "Sí")>  _
         Public Overridable Sub Reglas_LosClientesPremiumTienenUnMontoMinimoParaCalificar()
             Me.Reglas("los clientes premium tienen un monto minimo para calificar", "premium", "libros", "$25", "Sí", CType(Nothing,String()))
         End Sub
@@ -116,7 +116,7 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$50"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "Sí")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "Sí")>  _
         Public Overridable Sub Reglas_LosClientesPremiumTienenPromocionDeEnvioEnLibros()
             Me.Reglas("los clientes premium tienen promocion de envío en libros", "premium", "libros", "$50", "Sí", CType(Nothing,String()))
         End Sub
@@ -129,7 +129,7 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "lavadoras"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$250"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "No")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "No")>  _
         Public Overridable Sub Reglas_SoloLosLibrosSeEntreganGratis()
             Me.Reglas("solo los libros se entregan gratis", "premium", "lavadoras", "$250", "No", CType(Nothing,String()))
         End Sub
@@ -141,10 +141,10 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "la orden no califica si contiene más que libros"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "libros, lavadoras"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$250"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "No")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$275"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "No")>  _
         Public Overridable Sub Reglas_LaOrdenNoCalificaSiContieneMasQueLibros()
-            Me.Reglas("la orden no califica si contiene más que libros", "premium", "libros, lavadoras", "$250", "No", CType(Nothing,String()))
+            Me.Reglas("la orden no califica si contiene más que libros", "premium", "libros, lavadoras", "$275", "No", CType(Nothing,String()))
         End Sub
         
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
@@ -154,10 +154,10 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "la oferta no aplica si la orden solo contiene bienes digitales"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "digitales"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$2500"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "NA")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$100"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "NA")>  _
         Public Overridable Sub Reglas_LaOfertaNoAplicaSiLaOrdenSoloContieneBienesDigitales()
-            Me.Reglas("la oferta no aplica si la orden solo contiene bienes digitales", "premium", "digitales", "$2500", "NA", CType(Nothing,String()))
+            Me.Reglas("la oferta no aplica si la orden solo contiene bienes digitales", "premium", "digitales", "$100", "NA", CType(Nothing,String()))
         End Sub
         
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
@@ -167,10 +167,10 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "los bienes digitales no afectan calificacion de otros productos"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "libros, digitales"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$250"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "Sí")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$30"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "Sí")>  _
         Public Overridable Sub Reglas_LosBienesDigitalesNoAfectanCalificacionDeOtrosProductos()
-            Me.Reglas("los bienes digitales no afectan calificacion de otros productos", "premium", "libros, digitales", "$250", "Sí", CType(Nothing,String()))
+            Me.Reglas("los bienes digitales no afectan calificacion de otros productos", "premium", "libros, digitales", "$30", "Sí", CType(Nothing,String()))
         End Sub
         
         <Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute(),  _
@@ -180,10 +180,10 @@ testRunner.Then(String.Format("la orden ""{0}""", calificaParaUnaEntregaGratuita
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:intención del ejemplo", "los bienes digitales no descalifican otros productos"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:categoria", "premium"),  _
          Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tipos de producto", "lavadoras, digitales"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$500"),  _
-         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:califica para una entrega gratuita", "No")>  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:precio total", "$300"),  _
+         Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:calificara para una entrega gratuita", "No")>  _
         Public Overridable Sub Reglas_LosBienesDigitalesNoDescalificanOtrosProductos()
-            Me.Reglas("los bienes digitales no descalifican otros productos", "premium", "lavadoras, digitales", "$500", "No", CType(Nothing,String()))
+            Me.Reglas("los bienes digitales no descalifican otros productos", "premium", "lavadoras, digitales", "$300", "No", CType(Nothing,String()))
         End Sub
     End Class
 End Namespace
