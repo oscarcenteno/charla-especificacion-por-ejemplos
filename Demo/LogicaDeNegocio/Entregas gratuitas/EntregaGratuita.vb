@@ -20,7 +20,7 @@
             If tipoDeCliente = CategoriaDeCliente.Normal Then
                 laRespuesta = Respuesta.No
             ElseIf tipoDeProducto = tipoDeProducto.Libros _
-                And precioTotal.Valor >= _elMinimo.Valor Then
+                And precioTotal.Valor > _elMinimo.Valor Then
                 laRespuesta = Respuesta.Sí
             ElseIf tipoDeProducto = tipoDeProducto.Digitales Then
                 laRespuesta = Respuesta.NA
